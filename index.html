@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Com Todo Meu Amor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Adicionar música de fundo -->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music/fundo.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Para Ana Júlia, Com Todo Meu Amor</h1>
+        </header>
+
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="photo-grid" data-layout="2">
+                        <img src="images/inicio1.jpg" alt="Casal feliz 3" class="photo-grid-item">
+                        <img src="images/inicio2.jpg" alt="Casal feliz 3" class="photo-grid-item">
+                    </div>
+                    <div class="carousel-caption">As primeiras fotos</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="photo-grid" data-layout="2">
+                        <img src="images/heroina1.jpg" alt="Casal feliz 1" class="photo-grid-item">
+                        <img src="images/heroina2.jpg" alt="Casal feliz 2" class="photo-grid-item">
+                    </div>
+                    <div class="carousel-caption">Minha Heroína</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="photo-grid" data-layout="2">
+                        <img src="images/show.jpg" alt="Show especial" class="photo-grid-item">
+                        <img src="images/show3.jpg" alt="Show especial" class="photo-grid-item">
+                    </div>
+                    <div class="carousel-caption">Alguns momentinhos</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="photo-grid" data-layout="2">
+                        <img src="images/viagem2.jpg" alt="Viagem romântica" class="photo-grid-item">
+                        <img src="images/viagem3.jpg" alt="Viagem romântica" class="photo-grid-item">
+                    </div>
+                    <div class="carousel-caption">Nossa viagem inesquecível</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="photo-grid" data-layout="2">
+                        <img src="images/mamae2.jpg" alt="Momentos juntos" class="photo-grid-item">
+                        <img src="images/mamae3.jpg" alt="Momentos juntos" class="photo-grid-item">
+                    </div>
+                    <div class="carousel-caption">A melhor mamãe do mundo</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="photo-grid" data-layout="4">
+                        <img src="images/foto1.jpg" alt="Com a família" class="photo-grid-item">
+                        <img src="images/foto2.jpg" alt="Com a família" class="photo-grid-item">
+                    </div>
+                    <div class="carousel-caption">Minha melhor companhia</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-controls">
+            <button id="pauseButton" class="control-button">
+                <i class="fas fa-pause"></i>
+                Pausar
+            </button>
+            <button id="prevButton" class="control-button">
+                <i class="fas fa-chevron-left"></i>
+                Anterior
+            </button>
+            <button id="nextButton" class="control-button">
+                Próximo
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <section class="message">
+            <p>Mozi,</p>
+            <p>Sei que pareço repetitivo, mas é porque é verdade: eu te amo demais e me sinto muito sortudo por ter você comigo. Ao longo desses anos, você me deu os momentos mais incríveis da minha vida — coisas que eu nem imaginava que um dia viveria.
+                <br>
+                Obrigado por tudo. De verdade. Você é a melhor pessoa que eu já conheci e o maior presente que Deus poderia me dar.
+                <br>
+                Te amo muito, muito mesmo. ❤️
+
+                Ah, seu presente está no banco de trás!
+            </p>
+        </section>
+
+        <!-- <section class="timeline">
+            <h2>Nossa História</h2>
+            <ul>
+                <li>
+                    <span class="date">15/02/2023</span>
+                    <span class="event">Nosso primeiro beijo</span>
+                </li>
+                <li>
+                    <span class="date">20/03/2023</span>
+                    <span class="event">Nossa primeira viagem juntos</span>
+                </li>
+                <li>
+                    <span class="date">01/05/2023</span>
+                    <span class="event">O dia em que você me conquistou</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="surprise">
+            <button id="surpriseButton">
+                <i class="fas fa-heart"></i>
+                Clique aqui para uma surpresa!
+            </button>
+            <div id="surpriseContent" class="hidden">
+                <h3>Surpresa Especial!</h3>
+                <p>Mensagem secreta aqui...</p>
+            </div>
+        </section> -->
+
+        <footer>
+            <p>Feito com amor por Amorzinho, Vinicius</p>
+        </footer>
+    </div>
+    
+    <!-- Adicionar CSS para os confetes -->
+    <style>
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff6b6b;
+            animation: confettiAnimation 2s linear infinite;
+        }
+
+        @keyframes confettiAnimation {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+    <!-- Scripts -->
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.photo-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.photo-grid-item {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Layouts específicos */
+.photo-grid[data-layout="1"] {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.photo-grid[data-layout="2"] {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 15px;
+}
+
+.photo-grid[data-layout="3"] {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    height: 100%;
+}
+
+.photo-grid[data-layout="3"] .photo-grid-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    height: 45%;
+}
+
+.photo-grid[data-layout="3"] .photo-grid-item:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    height: 45%;
+}
+
+.photo-grid[data-layout="3"] .photo-grid-item:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    height: 45%;
+}
+
+.photo-grid[data-layout="4"] {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    height: 100%;
+}
+
+.photo-grid[data-layout="4"] .photo-grid-item {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 45%;
+}
+
+.photo-grid[data-layout="3"] .photo-grid-item {
+    height: 100%;
+    width: 100%;
+}
+
+.photo-grid[data-layout="4"] .photo-grid-item {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;
+}
+
+.control-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.control-button:hover {
+    background-color: #ff1493;
+}
+
+.control-button i {
+    margin-right: 5px;
+}
+
+.control-button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.control-button:hover {
+    transform: scale(1.05);
+    background: #ff1493;
+}
+
+.carousel-description {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-description h3 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.carousel-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 400px;
+    }
+    
+    .carousel-caption {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .control-button {
+        padding: 0.4rem 1.2rem;
+    }
+}
